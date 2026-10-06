@@ -20,22 +20,22 @@
 ## 🚀 Запуск в Docker
 
 1. Клонируйте репозиторий:
-   \`\`\`bash
-   git clone https://github.com/твой-юзернейм/phish-guard.git
-   cd phish-guard
-   \`\`\`
+```bash
+git clone https://github.com/Extendsmf/phish-guard.git
+cd phish-guard
+```
 
 2. Настройте конфигурацию:
-   \`\`\`bash
-   cp .env.example .env
-   # Заполните TELEGRAM_BOT_TOKEN и VIRUSTOTAL_API_KEY
-   \`\`\`
+```bash
+cp .env.example .env
+# Заполните TELEGRAM_BOT_TOKEN и VIRUSTOTAL_API_KEY
+```
 
 3. Соберите и запустите фоновый сервис:
-   \`\`\`bash
-   docker build -t phish-guard .
-   docker run -d --name phish-guard --restart always --env-file .env phish-guard
-   \`\`\`
+```bash
+docker build -t phish-guard .
+docker run -d --name phish-guard --restart always --env-file .env phish-guard
+```
 
 ---
 
@@ -43,7 +43,7 @@
 
 Пользователь отправляет файл `sample_phish.eml` боту и получает отчет:
 
-\`\`\`text
+```text
 --- ОТЧЕТ АНАЛИЗА ПИСЬМА ---
 Subject: СРОЧНО: Ваша учетная запись заблокирована!
 From: Security Team <security-alert@bank-update-security.com>
@@ -58,4 +58,5 @@ http://malicious-phishing-login.ru/login.php
 сколько вендоров считают ссылку вредоносной: 0
 
 🔴 ВЕРДИКТ: ВЫСОКАЯ ВЕРОЯТНОСТЬ ФИШИНГА!
-\`\`\`
+```
+
